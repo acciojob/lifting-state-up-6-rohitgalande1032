@@ -13,9 +13,11 @@ const App = () => {
 
   // Function to mark a todo as completed
   const handleComplete = (id) => {
-    setTodos(todos.map(todo => 
-      todo.id === id ? { ...todo, completed: true } : todo
-    ));
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, completed: true } : todo
+      )
+    );
   };
 
   return (
