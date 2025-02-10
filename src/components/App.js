@@ -13,10 +13,10 @@ const App = () => {
 
   // Function to mark a todo as completed
   const handleComplete = (id) => {
-    setTodos((prevTodos) =>
-      prevTodos.map((todo) =>
+    setTodos((prevTodos) => {
+       return prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed: true } : todo
-      )
+    )}
     );
   };
 
